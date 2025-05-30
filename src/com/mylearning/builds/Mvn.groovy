@@ -6,7 +6,8 @@ class Mvn {
         this.jenkins = jenkins
     }
     
- def run(args){
+ def run(args) {
  jenkins.sh """ ${args}
  """
  }
+}
