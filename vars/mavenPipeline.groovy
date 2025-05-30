@@ -1,12 +1,10 @@
 import com.mylearning.builds.Mvn
 
 def call(Map pipelineParams) {
-    // an instance of the Calculator class 
+    // an instance of the Mvn class 
     Mvn mvn_new = new Mvn(this)
     pipeline {
-        agent {
-            label 'java-slave'
-        }
+        agent any
         environment {
             APPLICATION_NAME = "${pipelineParams.appName}"
         }
