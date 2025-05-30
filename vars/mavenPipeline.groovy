@@ -9,7 +9,7 @@ def call(Map pipelineParams) {
             APPLICATION_NAME = "${pipelineParams.appName}"
         }
         tools {
-            jdk 'jdk11'
+            jdk 'Jdk11'
             maven 'Maven_3.9.0'
         }
         stages {
