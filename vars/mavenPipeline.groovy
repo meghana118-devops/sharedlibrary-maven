@@ -1,8 +1,8 @@
-import com.mylearning.builds.maven
+import com.mylearning.builds.Mvn
 
 def call(Map pipelineParams) {
     // an instance of the Calculator class 
-    Mvn Mvn_new = new Mvn(this)
+    Mvn mvn_new = new Mvn(this)
     pipeline {
         agent {
             label 'java-slave'
@@ -19,7 +19,7 @@ def call(Map pipelineParams) {
                     echo "Building the project"
                     echo "************ In Build Stage for ${env.APPLICATION_NAME}  ************"
                     script {
-                        Mvn_new.run('mvn clean install')
+                        mvn_new.run('mvn clean install')
 
                     }
                 }
